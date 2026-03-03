@@ -73,8 +73,10 @@ const Footer = () => {
               <div className={footerStyles.brandContainer}>
                 <div className={footerStyles.brandGradient}></div>
                 <div className="relative font-serif flex items-center gap-3">
-                  <img src={logo} alt="Logo" className="w-12 h-12" />
-                  <h3 className={footerStyles.brandTitle}>CampusX</h3>
+                  <img src={logo} alt="Logo" className="w-20 h-12" />
+                  <h3 className={footerStyles.brandTitle}>
+                    Campus<span className="text-red-500">X</span>
+                  </h3>
                 </div>
               </div>
               <p className={footerStyles.brandDescription}>

@@ -225,10 +225,7 @@ const Navbar = () => {
                 <span>Create Account</span>
               </button>
             ) : (
-              <div className="px-4 py-2">
-                2
-                <UserButton afterSignOutUrl="/" />
-              </div>
+              ""
             )}
           </div>
         </div>

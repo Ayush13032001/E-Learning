@@ -43,10 +43,11 @@ const DoubtClearance = () => {
           {/* Title */}
           <h1
             className="
-        text-center text-5xl font-extrabold mb-16
-        text-transparent bg-clip-text
-        bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600
-      "
+    text-center text-5xl font-extrabold mb-16
+    text-transparent bg-clip-text
+    bg-gradient-to-r from-blue-600 via-indigo-500 to-purple-600
+    drop-shadow-[0_4px_10px_rgba(79,70,229,0.4)]
+  "
           >
             Doubt Clearance
           </h1>

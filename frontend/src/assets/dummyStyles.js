@@ -569,9 +569,9 @@ export const coursePageStyles = {
   searchContainer:
     "max-w-2xl mx-auto mb-8 md:mb-12 relative group px-2 sm:px-0",
   searchGradient:
-    "absolute -inset-1 bg-gradient-to-r from-purple-500 via-blue-500 to-indigo-500 rounded-3xl blur-lg opacity-20 group-hover:opacity-60 transition-opacity duration-700 animate-gradient-x",
+    "absolute -inset-1 bg-gradient-to-r from-purple-500 via-blue-500 to-indigo-500 rounded-3xl blur-lg opacity-20 group-hover:opacity-60 transition-opacity duration-700 animate-gradient-x pointer-events-none",
   searchInputContainer:
-    "relative bg-white/80 backdrop-blur-lg border border-transparent group-hover:border-blue-400 rounded-3xl shadow-xl transition-all duration-500",
+    "relative z-10 bg-white/80 backdrop-blur-lg border border-transparent group-hover:border-blue-400 rounded-3xl shadow-xl transition-all duration-500",
   searchIconContainer:
     "absolute inset-y-0 left-0 pl-3 sm:pl-4 flex items-center pointer-events-none",
   searchIcon:
@@ -736,7 +736,7 @@ export const coursePageCustomStyles = `
 export const facultyStyles = {
   // Layout & Container
   container:
-    "min-h-screen pt-12 sm:pt-16 bg-gradient-to-br from-blue-50 via-white to-purple-50",
+    "pt-12 sm:pt-16 bg-gradient-to-br from-blue-50 via-white to-purple-50",
 
   // Header Section
   header:

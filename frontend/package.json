@@ -2,15 +2,12 @@
   "name": "frontend",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://Ayush13032001.github.io/E-Learning",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@clerk/clerk-react": "^5.61.3",

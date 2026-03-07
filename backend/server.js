@@ -8,7 +8,8 @@ dotenv.config();
 // intialize express
 
 const app = express();
-connectDB();
+
+await connectDB();
 
 // Middleware
 

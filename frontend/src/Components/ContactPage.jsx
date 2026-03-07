@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { contactStyles } from "../assets/dummyStyles";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import {

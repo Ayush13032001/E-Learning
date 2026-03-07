@@ -8,7 +8,7 @@ dotenv.config();
 // intialize express
 
 const app = express();
-await connectDB();
+connectDB();
 
 // Middleware
 
@@ -19,7 +19,7 @@ app.use(express.json());
 
 app.get("/", (req, res) => res.send("Api Working"));
 
-app.post("/clerk", express.json(), clerkWebhook);
+app.post("/clerk", clerkWebhook);
 
 // port
 

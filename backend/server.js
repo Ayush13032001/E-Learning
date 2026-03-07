@@ -19,7 +19,7 @@ app.use(express.json());
 
 app.get("/", (req, res) => res.send("Api Working"));
 
-app.post("/clerk", clerkWebhook);
+app.post("/clerk", express.raw({ type: "application/json" }), clerkWebhook);
 
 // port
 

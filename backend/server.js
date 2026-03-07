@@ -14,6 +14,7 @@ await connectDB();
 
 app.use(cors());
 app.use(express.json());
+
 //Routes
 
 app.get("/", (req, res) => res.send("Api Working"));

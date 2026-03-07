@@ -7,7 +7,7 @@ export const clerkWebhook = async (req, res) => {
 
     const whook = new Webhook(process.env.CLERK_WEBHOOK_SECRET);
 
-    const payload = req.body.toString();
+    const payload = req.body;
 
     const headers = {
       "svix-id": req.headers["svix-id"],
@@ -20,33 +20,26 @@ export const clerkWebhook = async (req, res) => {
     const { data, type } = evt;
 
     switch (type) {
-      case "user.created": {
-        const userData = {
+      case "user.created":
+        await User.create({
           _id: data.id,
           email: data.email_addresses[0].email_address,
-          name: data.first_name + " " + data.last_name,
+          name: `${data.first_name} ${data.last_name}`,
           imageUrl: data.image_url,
-        };
-
-        await User.create(userData);
+        });
         break;
-      }
 
-      case "user.updated": {
-        const userData = {
+      case "user.updated":
+        await User.findByIdAndUpdate(data.id, {
           email: data.email_addresses[0].email_address,
-          name: data.first_name + " " + data.last_name,
+          name: `${data.first_name} ${data.last_name}`,
           imageUrl: data.image_url,
-        };
-
-        await User.findByIdAndUpdate(data.id, userData);
+        });
         break;
-      }
 
-      case "user.deleted": {
+      case "user.deleted":
         await User.findByIdAndDelete(data.id);
         break;
-      }
 
       default:
         console.log("Unhandled event:", type);

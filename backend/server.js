@@ -13,13 +13,14 @@ connectDB();
 // Middleware
 
 app.use(cors());
-app.use(express.json());
 
 //Routes
 
 app.get("/", (req, res) => res.send("Api Working"));
 
 app.post("/clerk", express.raw({ type: "application/json" }), clerkWebhook);
+
+app.use(express.json());
 
 // port
 
